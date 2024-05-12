@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  Spring-transaction-example:
+   #   build: .
+      container_name: spring-transaction-container
+      image: spring-transaction:14-08
+      ports:
+       - "8081:8080"
