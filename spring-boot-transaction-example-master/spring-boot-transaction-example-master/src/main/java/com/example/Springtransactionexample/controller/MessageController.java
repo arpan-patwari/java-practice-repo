@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.Springtransactionexample.model.Message;
 import com.example.Springtransactionexample.service.MessageService;
 
 @RestController
@@ -15,7 +16,7 @@ public class MessageController {
 	private MessageService messageService;
 
 	@GetMapping
-	public String addMessage() {
+	public Message addMessage() {
 		return messageService.saveMessage();
 	}
 }

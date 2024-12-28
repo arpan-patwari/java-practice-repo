@@ -4,9 +4,11 @@ import javax.annotation.PostConstruct;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Slf4j
 public class Conditional
 {
 	private final String conditionalValue = "Conditional bean is present";
@@ -16,11 +18,11 @@ public class Conditional
 	@PostConstruct
 	public void init()
 	{
-		System.out.println("Conditional generated with value " + this.conditionalValue);
+		log.info("Conditional generated with value " + this.conditionalValue);
 
 		if (this.condition != null)
 		{
-			System.out.println("param value for condition : " + condition);
+			log.info("param value for condition : " + condition);
 		}
 	}
 }

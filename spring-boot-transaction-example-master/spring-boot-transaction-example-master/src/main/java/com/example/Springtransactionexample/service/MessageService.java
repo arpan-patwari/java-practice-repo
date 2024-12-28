@@ -1,6 +1,8 @@
 package com.example.Springtransactionexample.service;
 
+import com.example.Springtransactionexample.model.Message;
+
 public interface MessageService {
 
-	String saveMessage();
+	Message saveMessage();
 }

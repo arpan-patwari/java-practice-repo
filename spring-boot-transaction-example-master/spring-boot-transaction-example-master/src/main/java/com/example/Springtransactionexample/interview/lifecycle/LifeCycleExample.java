@@ -20,10 +20,11 @@ import org.springframework.context.annotation.ImportAware;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.type.AnnotationMetadata;
+import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-//@Component
+@Component
 @Data
 public class LifeCycleExample
 		implements InitializingBean, DisposableBean, ApplicationContextAware, ApplicationEventPublisherAware,
